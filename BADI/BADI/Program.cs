@@ -81,6 +81,10 @@ namespace BADI
                 }
             }
 
+            Feed grains = new Feed();
+            LiveFeeder cricket = new LiveFeeder();
+            cricket.Diet.Add(grains);
+
             //Return to Main() for program loop
             return 0;
         }

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1972
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BADI", "BADI\BADI.csproj", "{32FEC3E2-7B1D-4E9F-A383-8826F84E4056}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BADI", "BADI\BADI.csproj", "{32FEC3E2-7B1D-4E9F-A383-8826F84E4056}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BADIlib", "BADIlib\BADIlib.csproj", "{B1042367-C282-43BD-8E6A-CFF53EB42DDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BADIlib", "BADIlib\BADIlib.csproj", "{B1042367-C282-43BD-8E6A-CFF53EB42DDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{DFB9F067-3136-4600-B8C1-9BD4DC410509}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B1042367-C282-43BD-8E6A-CFF53EB42DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1042367-C282-43BD-8E6A-CFF53EB42DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1042367-C282-43BD-8E6A-CFF53EB42DDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFB9F067-3136-4600-B8C1-9BD4DC410509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB9F067-3136-4600-B8C1-9BD4DC410509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB9F067-3136-4600-B8C1-9BD4DC410509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB9F067-3136-4600-B8C1-9BD4DC410509}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

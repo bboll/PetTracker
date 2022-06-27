@@ -1,14 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>BADI.pfx</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+    <ApplicationIcon />
+    <StartupObject />
+    <NeutralLanguage />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>3</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
   </ItemGroup>
-
+ 
   <ItemGroup>
     <ProjectReference Include="..\BADIlib\BADIlib.csproj" />
   </ItemGroup>
@@ -18,6 +28,19 @@
       <HintPath>System</HintPath>
     </Reference>
   </ItemGroup>
+
+  <!-- Read public key for test project for use with SN-->
+  <PropertyGroup>
+    <PublicKeyFilePath>C:\Users\Brian\source\repos\BADI\tests\obj\Debug\netcoreapp2.1\pbk.txt</PublicKeyFilePath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>$([System.IO.File]::ReadAllText($(PublicKeyFilePath)))</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <!-- End SN logic-->
 
   <ItemGroup>
     <Compile Update="Settings.Designer.cs">
