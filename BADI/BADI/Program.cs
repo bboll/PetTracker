@@ -32,7 +32,7 @@ namespace BADI
             }
 
             //Loop menu display function while not terminating in error
-            while(runtimeCode is 0)
+            while(runtimeCode == 0)
             {
                 runtimeCode = QueryUserInput();
             }
@@ -80,10 +80,6 @@ namespace BADI
                     Console.WriteLine(e.Message);
                 }
             }
-
-            Feed grains = new Feed();
-            LiveFeeder cricket = new LiveFeeder();
-            cricket.Diet.Add(grains);
 
             //Return to Main() for program loop
             return 0;

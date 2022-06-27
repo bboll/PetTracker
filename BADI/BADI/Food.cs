@@ -6,7 +6,7 @@ namespace BADI
 {
     internal class Food
     {
-        //Schema: Encapsulates Animal/Feed classes since everything is eaten by something
-        //******* Purely for wrapping purposes at the moment
+        //Schema: Encapsulates Animal/Feed classes since everything is eaten by something but
+        //******* not everything is an animal, i.e. pellets, grains, etc.
     }
 }

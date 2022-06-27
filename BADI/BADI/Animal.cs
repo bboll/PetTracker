@@ -6,20 +6,35 @@ namespace BADI
 {
     internal abstract class Animal : Food
     {
+        public enum WaterType {
+            Tap,
+            DechlorinatedTap,
+            Spring,
+            RO, //Reverse Osmosis
+            Distilled,
+            Salt,
+            None
+        }
+
         //SCHEMA: My vision here is to have general feeding notes and then implement individual Diet<FoodItem> notes in 
         //******* the FoodItem class. These notes would be general, like "separate from others before feeding",
         //******* "only feed a small amount, recommended {FoodItem.portion} per meal", etc.
-        public String Species { get; set; }
-        public String Name { get; set; }
-        public Int16 Temperature { get; set; }
-        public String AirCirculationNotes { get; set; }
-        public String Activity { get; set; } //Nocturnal/Diurnal?
+        //******* Note to flesh out these properties more and naturally they will change
+        internal String Species { get; set; }
+        internal String Name { get; set; }
+        internal short Temperature { get; set; }
+        internal String AirCirculationNotes { get; set; }
+        internal String SleepActivity { get; set; } //Nocturnal/Diurnal
 
         //SCHEMA: Derived classes implement additional notes. 
-        public String Notes { get; set; }
-        public String EnclosureNotes { get; set; }
-        public String FeedingNotes { get; set; } 
-        public String FeedingSchedule { get; set; }
+        internal String Notes { get; set; } //General notes, perhaps an unneeded property
+        internal String EnclosureNotes { get; set; }
+        internal String EnclosureSize { get; set; }
+        internal String FeedingNotes { get; set; } 
+        internal String FeedingSchedule { get; set; }
+        internal String Light { get; set; }
+
+        //TODO: Heating elements, should that be implemented here. Ways it differs from Temperature for fish.
 
 
         //TODO: Eventually implement a FoodItems derived from Animal class, as food and the care for live food varies
